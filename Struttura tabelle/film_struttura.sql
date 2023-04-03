@@ -5,5 +5,5 @@ CREATE TABLE Film(
 		regista VARCHAR(30),
 		datauscita DATE,
 		produttore VARCHAR(30),
-		PRIMARY KEY(codicefilm)
+		PRIMARY KEY(cod_film)
 );
