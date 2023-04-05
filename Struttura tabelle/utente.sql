@@ -1,7 +1,7 @@
 CREATE TABLE Utente(
-    cod_utente CHAR(5),
+    id_utente INT AUTO_INCREMENT,
     email VARCHAR(40),
     password VARCHAR(255),
     telefono VARCHAR(20),
-    PRIMARY KEY (cod_utente)
+    PRIMARY KEY (id_utente)
 );

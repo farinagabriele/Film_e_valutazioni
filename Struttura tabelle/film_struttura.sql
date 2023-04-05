@@ -1,4 +1,3 @@
-
 CREATE TABLE Film(
 		cod_film CHAR(5),
 		titolo VARCHAR(50) NOT NULL,

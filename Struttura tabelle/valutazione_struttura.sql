@@ -3,9 +3,9 @@ CREATE TABLE Valutazione (
     valutazione INT,
     commento VARCHAR(250),
     data_e_ora DATETIME,
-    cod_utente CHAR(5),
+    id_utente INT,
     cod_film CHAR(5),
     PRIMARY KEY (id_valutazione),
-    FOREIGN KEY (cod_utente) REFERENCES Utente(cod_utente),
+    FOREIGN KEY (id_utente) REFERENCES Utente(id_utente),
     FOREIGN KEY (cod_film) REFERENCES Film(cod_film)
 );
