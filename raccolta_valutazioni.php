@@ -16,5 +16,17 @@
 
         // Memorizzare la valutazione massima nel database
     ?>
+    <?php
+        // verifica funzionamento "connessione.php"
+        include "connessione.php";
+        $sql = "SELECT * FROM film;";
+        $result = $con->query($sql);
+
+        if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()){
+                echo $row["titolo"];
+            }
+        }
+    ?>
 </body>
 </html>
