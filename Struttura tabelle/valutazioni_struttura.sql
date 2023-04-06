@@ -1,4 +1,4 @@
-CREATE TABLE Valutazione (
+CREATE TABLE Valutazioni (
     id_valutazione INT AUTO_INCREMENT,
     valutazione INT,
     commento VARCHAR(250),
