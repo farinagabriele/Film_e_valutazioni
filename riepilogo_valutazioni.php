@@ -32,6 +32,11 @@
                 echo "<tr>";
                 // Colonne
                 echo "<td>" . $row["id_valutazione"] ."</td>";
+                echo " <td> " . $row [" valutazione"] ." </td> ";
+                echo " <td> " . $row [" commento "] ." </td> ";
+                echo " <td> " . $row [" data_e_ora "] ." </td> ";
+                echo " <td> " . $row ["id_utente"]."</td>";
+                echo " <td> " . $row [" cod_film "] ." </td> ";
 
 
 
