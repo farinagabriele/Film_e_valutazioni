@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raccolta Valutazioni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="stile.css" type="text/css">
 </head>
 <body>
     <?php
@@ -13,7 +15,7 @@
         $commento = $_POST["commento"];
         $data_e_ora = $_POST["data_e_ora"];
         $cod_film = $_POST["cod_film"];
-        $id_utente = $_SESSION["id_utente"];
+        $id_utente = $_POST["id_utente"];
 
         // Verificare se l'utente ha già dato una valutazione per quel film
         include "connessione.php";

@@ -1,0 +1,22 @@
+.centrato
+{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+thead
+{
+    background-color: yellow;
+}
+
+tbody
+{
+    background-color: lightskyblue;
+    color: white;
+}
+
+body
+{
+    background-color: lightyellow;
+}

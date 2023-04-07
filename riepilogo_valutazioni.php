@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riepilogo valutazioni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="stile.css" type="text/css">
 </head>
 <body>
     <h1>Riepilogo valutazioni</h1>
@@ -31,7 +33,7 @@
             {
                 echo "<tr>";
                 // Colonne
-                echo "<td>" . $row["id_valutazione"] ."</td>";
+                echo "<th scope=\"row\">" . $row["id_valutazione"] ."</th>";
                 echo " <td> " . $row["valutazione"] ." </td> ";
                 echo " <td> " . $row["commento"] ." </td> ";
                 echo " <td> " . $row["data_e_ora"] ." </td> ";
@@ -58,7 +60,7 @@
             $row = $result->fetch_assoc();
             $media = $row["media"];
             // Stampa la media
-            echo "<h3>$media</h3>";
+            echo "<p><i>Media delle valutazioni:</i> <b>$media</b></p>";
         }
 
         // Il primo film con la valutazione massima
@@ -75,7 +77,7 @@
             $row = $result->fetch_assoc();
             $film_massimo = $row["titolo"];
             // Stampa il film
-            echo "<h3>$film_massimo</h3>";
+            echo "<p><i>Titolo film con valutazione massima:</i> <b>$film_massimo</b></p>";
         }
 
         // Chiusura connessione
