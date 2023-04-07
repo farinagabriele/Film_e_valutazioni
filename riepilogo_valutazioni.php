@@ -12,7 +12,7 @@
         // Lista delle valutazioni
         include "connessione.php";
         // Query: elenco di tutte le valutazioni
-        $sql = "";
+        $sql = "SELECT * FROM valutazione";
         $result = $con->query($sql);
         // Controllo
         if ($result->num_rows > 0)
