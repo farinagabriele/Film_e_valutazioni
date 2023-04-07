@@ -58,7 +58,7 @@
             $row = $result->fetch_assoc();
             $media = $row["media"];
             // Stampa la media
-            echo "<h3></h3>";
+            echo "<h3>$media</h3>";
         }
 
         // Il primo film con la valutazione massima
@@ -75,7 +75,7 @@
             $row = $result->fetch_assoc();
             $film_massimo = $row["titolo"];
             // Stampa il film
-            echo "<h3></h3>";
+            echo "<h3>$film_massimo</h3>";
         }
 
         // Chiusura connessione
