@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,5 +87,7 @@
         $result->free();
         $con->close();
     ?>
+    <p>Vuoi inserire un'altra valutazione? Vai a <a href="inserimento_valutazioni.php">Inserimento valutazioni</a></p>
+    <p>Vuoi chiudere questa sessione? Vai a <a href="logout.php">Logout</a></p>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +51,8 @@
 
             <input name="invia" type="submit" value="Invia" class="btn btn-primary">
         </form>
+        <p>Vuoi visualizzare il riepilogo di tutte le valutazioni? Vai a <a href="riepilogo_valutazioni.php">Riepilogo valutazioni</a></p>
+        <p>Vuoi chiudere questa sessione? Vai a <a href="logout.php">Logout</a></p>
     </div>
 </body>
 </html>
