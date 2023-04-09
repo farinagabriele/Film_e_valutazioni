@@ -22,7 +22,7 @@
         // Raccolta valutazione film
         $valutazione_corrente = $_POST["valutazione"];
         $commento = $_POST["commento"];
-        $data_e_ora = $_POST["data_e_ora"];
+        $data_e_ora = date("y-m-d h:i:s");
         $cod_film = $_POST["cod_film"];
         $id_utente = $_POST["id_utente"];
 
@@ -52,7 +52,9 @@
                 {
                     // Memorizzare la valutazione massima nel database
                     $sql = "UPDATE Valutazioni
-                            SET valutazione = $valutazione_corrente
+                            SET valutazione = $valutazione_corrente,
+                                commento = '$commento',
+                                data_e_ora = '$data_e_ora'
                             WHERE id_utente = $id_utente AND cod_film = '$cod_film';";
                     // Controllo errori nell'aggiornamento
                     if ($con->query($sql))
@@ -72,11 +74,12 @@
             else
             {
                 echo "<h1>Hai già inserito una valutazione per questo film in un'altra sessione</h1>";
-                echo "Vettore codici_film:<br/>";
-                foreach($_SESSION["codici_film"] as $val)
-                {
-                    echo "$val<br/>";
-                }
+                /* echo "Vettore codici_film:<br/>";
+                   foreach($_SESSION["codici_film"] as $val)
+                   {
+                       echo "$val<br/>";
+                   }
+                */
             }
         }
         else
@@ -91,11 +94,13 @@
             if ($con->query($sql))
             {
                 echo "<h1>Valutazione inserita correttamente</h1>";
-                echo "Vettore codici_film:<br/>";
-                foreach($_SESSION["codici_film"] as $val)
-                {
-                    echo "$val<br/>";
-                }
+                /*
+                    echo "Vettore codici_film:<br/>";
+                    foreach($_SESSION["codici_film"] as $val)
+                    {
+                        echo "$val<br/>";
+                    }
+                */
             }
             else
             {

@@ -17,8 +17,7 @@
         <form method="post" action="raccolta_valutazioni.php">
             <input name="valutazione" type="number" placeholder="valutazione">
             <input name="commento" type="text" placeholder="commento">
-            <input name="data_e_ora" type="text" placeholder="data_e_ora"><br/>
-            <input name="id_utente" type="number" placeholder="id_utente">
+            <input name="id_utente" type="number" placeholder="id_utente"><br/>
             <select name="cod_film">
                 <?php
                     include "connessione.php";
@@ -47,7 +46,7 @@
                     $con->close();
                     
                 ?>
-            </select><br/>
+            </select>
 
             <input name="invia" type="submit" value="Invia" class="btn btn-primary">
         </form>
